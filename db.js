@@ -13,3 +13,7 @@ const connectDB = async () => {
 };
 
 export default connectDB;
+
+
+
+//This code implements a basic user authentication system with CRUD operations for user data.
