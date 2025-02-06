@@ -29,7 +29,7 @@ const newUser = async (req, res) => {
     res.status(201).send("User created successfully");
 
   } catch (err) {
-    console.error("Error during user registration:", err); // 
+    
     res.status(500).send("Something went wrong, please try again later.");
   }
 };
