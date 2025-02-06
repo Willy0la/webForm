@@ -3,13 +3,11 @@ import bcrypt from "bcryptjs";
 import User from "../model/user.js";
 
 const newUser = async (req, res) => {
-  const { firstName, lastName, email, password, conpassword } = req.body;
+  const { firstName, lastName, email, password } = req.body;
 
   try {
     
-    if (password !== conpassword) {
-      return res.status(400).send("Passwords do not match");
-    }
+    
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
